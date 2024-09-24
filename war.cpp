@@ -18,11 +18,14 @@ int main() {
     Deck myDeck;  // creates new deck
     string player1;
     string player2;
+    int gamesToPlay;
     srand(time(0));       //Changes seed of rand() to be used in shuffle()
     cout << "Please enter Player 1's name: ";
     cin >> player1;
     cout << "Please enter Player 2's name: ";
     cin >> player2;
+    cout << "How many games will they play? ";
+    cin >> gamesToPlay;
     cout << endl << "Original Deck" << endl;
     myDeck.print();       //Display unshuffeled deck
     myDeck.shuffle();     //Shuffle the deck
@@ -35,7 +38,7 @@ int main() {
     int ties = 0;
 
     //Play 26 games
-    for (int i = 0; i < 26; i++){
+    for (int i = 0; i < gamesToPlay; i++){
         cout << "Game " << i + 1 << endl << "--------" << endl;
         Card p1_card = myDeck.deal();
         Card p2_card = myDeck.deal();
