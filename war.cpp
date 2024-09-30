@@ -179,7 +179,7 @@ int main() {
     //If games being played is greater than cards in deck, an exception will be thrown
     try{
         for (int i = 0; i < gamesToPlay; i++){
-            if(myDeck.isEmpty()) break;
+            if(myDeck.isEmpty()) throw runtime_error("Number of games exceeds cards in deck.");
             cout << "Game " << i + 1 << endl << "--------" << endl;
             Card p1_card = myDeck.deal();
             Card p2_card = myDeck.deal();
